@@ -9,7 +9,7 @@ on:
         default: "500"
   schedule:
     # Twice per day (00:00 and 12:00 UTC)
-    - cron: "0 0,12 * * *"
+    - cron: "0 12 * * *"
 
 jobs:
   sync-blog:
