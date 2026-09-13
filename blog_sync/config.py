@@ -19,7 +19,7 @@ def _get_env(name: str, default: str) -> str:
 LOG_LEVEL: str = _get_env("LOG_LEVEL", "INFO")
 MAX_RESULTS: str | None = os.environ.get("MAX_RESULTS")
 PAGE_SIZE: str = _get_env("PAGE_SIZE", "50")
-BASE_URL: str = _get_env("BASE_URL", "lexxai.blogspot.com")
+BASE_URL: str = _get_env("BASE_URL", "lexsysko.blogspot.com")
 SAFETY_LIMIT = 5_000  # Max entries to process in total (to prevent infinite loops)
 
 USE_THREADING: bool = _get_env("USE_THREADING", "true").lower() in ("true", "1", "yes")
