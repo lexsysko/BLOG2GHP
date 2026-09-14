@@ -31,11 +31,11 @@ jobs:
       - name: Clone Project Repository (BLOG2GHP) [project-src]
         uses: actions/checkout@v4
         with:
-          repository: lexxai/BLOG2GHP
+          repository: lexsysko/BLOG2GHP
           path: project-src
 
-      # 2. Clone the TARGET Pages repo (lexxai) to push changes here
-      - name: Clone Target Pages Repo (lexxai) [publish-dir]
+      # 2. Clone the TARGET Pages repo (lexsysko) to push changes here
+      - name: Clone Target Pages Repo (lexsysko) [publish-dir]
         uses: actions/checkout@v4
         with:
           repository: lexsysko/lexsysko.github.io
@@ -61,7 +61,7 @@ jobs:
           cd project-src
           python sync_blog.py --verbose --dest ../publish-dir 
 
-      # 6. Commit changes TO THE TARGET REPO (lexxai)
+      # 6. Commit changes TO THE TARGET REPO (lexsysko)
       - name: Commit changes
         working-directory: publish-dir
         if: always()
