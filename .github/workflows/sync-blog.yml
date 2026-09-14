@@ -24,7 +24,7 @@ jobs:
       BASE_URL: ${{ secrets.BLOG_DOMAIN }}
       OLD_DOMAIN: ${{ secrets.BLOG_OLD_DOMAIN }}
       NEW_DOMAIN: ${{ secrets.BLOG_NEW_DOMAIN }}
-      LOG_LEVEL: INFO
+      # LOG_LEVEL: INFO
 
     steps:
       # 1. Clone your code from BLOG2GHP (where sync_blog.py lives)
