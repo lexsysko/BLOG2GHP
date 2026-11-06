@@ -15,11 +15,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+       
       - name: Update keep-alive timestamp
         run: |
-          date -u > .github/keep-alive.txt
+          mkdir -p keep-alive
+          date -u > keep-alive/timestamp.txt
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/keep-alive.txt
+          git checkout -B keep-alive-branch
+          git add keep-alive/timestamp.txt
           git commit -m "chore: automated keep-alive ping to prevent inactivity suspension"
-          git push
+          git push origin keep-alive-branch --force
+
