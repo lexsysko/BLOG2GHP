@@ -8,8 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+!.github/keep-alive.txt
 .*
 _posts/
 assets/
 
-!.github/keep-alive.txt
