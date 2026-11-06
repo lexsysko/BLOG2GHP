@@ -11,3 +11,5 @@ wheels/
 .*
 _posts/
 assets/
+
+!.github/keep-alive.txt
