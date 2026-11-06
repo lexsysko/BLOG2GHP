@@ -9,7 +9,7 @@ wheels/
 # Virtual environments
 .venv
 !.github/keep-alive.txt
-.*
+.env
 _posts/
 assets/
 
